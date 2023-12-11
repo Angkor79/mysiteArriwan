@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Esigned</title>
+
+  <!-- slider stylesheet -->
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+
+
+
+
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Arriwan
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="java.html"> Java </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="api.html"> Api </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact us</a>
+                </li>
+              </ul>
+              <div class="user_option">
+                <a href="">
+                  <img src="images/user.png" alt="">
+                </a>
+                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+
+<div class="w3-content w3-padding-64 w3-margin-top" style="max-width:1564px">
+
+  <h1>The Document Object</h1>
+  
+  
+ <hr>
+  <h2>สุ่มตัวเลขลูกเต๋า</h2>
+  <button onclick="rollAndDisplayDice()">ทอยลูกเต๋า</button>
+  <p id="diceResult"></p>
+  
+
+  <hr>
+    <h2>หาความยาวเส่นทแยงมุมของสี่เหลี่ยงผืนผ้า</h2>
+    <input id="base" type="text" placeholder="ป้อนความยาวของฐาน" />
+    <input id="height" type="text" placeholder="ป้อนความสูง" />
+    <h4>ผลลัพธ์:<span id="show"></span></h4>
+    <button onclick="calculateHypotenuse(document.getElementById('base').value, document.getElementById('height').value)">
+  คำนวน
+</button>
+
+  
+
+<hr>
+<input type="number" id="inputDays" style="width: 150px; height: 28px;" placeholder="จำนวนวัน">
+<button onclick="calculateSeconds()">คำนวณเป็นวินาที</button>
+<p id="resultInSeconds"></p>
+
+  
+  <hr>
+  <h2>คำนวณแต้มจากยอดซื้อขายโดยเฉพาะทุกยอดซื้อ100บาทจะได้1แต้ม</h2>
+  <input type="number" id="newTotalSales"  style="width: 150px; height: 28px;" placeholder="กรอกยอดซื้อขาย (บาท)">
+  <button onclick="updatePoints()">อัปเดตคะแนน</button>
+  <p>ยอดซื้อขาย: <span id="totalSales">100</span> บาท</p>
+  <p>จำนวนคะแนนที่ได้: <span id="loyaltyPoints">1</span> คะแนน</p>
+  
+  
+  <hr>
+  <h2>หาความยาวเส้นรอบวงของวงกลม</h2>
+  <button onclick="calculate()">คำนวณความยาว</button>
+  <p id="result"></p>
+  <hr>
+
+  <!-- chart -->
+  
+  <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+  <br>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  
+   
+  <canvas id="barChart" style="width:100%;max-width:700px"></canvas>
+  <br>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  
+
+
+
+
+  <script>
+    const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+    const yValues = [55, 49, 44, 24, 15];
+    const barColors = ["red", "green","blue","orange","brown"];
+    
+    new Chart("myChart", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        title: {
+          display: true,
+          text: "World Wine Production 2018"
+        }
+      }
+    });
+    </script>
+    
+   
+    
+    <script>
+      const xValue = ["Italy", "France", "Spain", "USA", "Argentina"];
+      const yValue = [55, 49, 44, 24, 15];
+      const barColor = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145"
+      ];
+      
+      new Chart("barChart", {
+        type: "doughnut",
+        data: {
+          labels: xValues,
+          datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+          }]
+        },
+        options: {
+          title: {
+            display: true,
+            text: "World Wide Wine Production 2018"
+          }
+        }
+      });
+      </script>
+    </div>
+    
+
+
+
+<!-- footer section -->
+
+<section class="info_section ">
+  <div class="container">
+    <div class="row">
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="container-fluid footer_section">
+<p>
+  &copy; 2020 All Rights Reserved By
+  <a href="https://html.design/">Free Html Templates</a>
+  Distrubuted By <a href="https://themewagon.com">ThemeWagon</a>
+</p>
+</section>
+
+
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+</script>
+<!-- owl carousel script 
+  -->
+<script type="text/javascript">
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 0,
+    navText: [],
+    center: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+</script>
+<!-- end owl carousel script -->
+
+
+
+<script>
+
+ // สุ่มผลลูกเต๋า
+  function rollDice() {
+    const randomNumber = Math.floor(Math.random() * 6) + 1;
+    return randomNumber;
+  }
+
+  function rollAndDisplayDice() {
+    const result = rollDice();
+    document.getElementById("diceResult").innerHTML = `ผลลูกเต๋า: ${result}`;
+  }
+
+ // หาความยาวเส่นทแยงมุมของสี่เหลี่ยงผืนผ้า
+ function calculateHypotenuse(base, height) {
+            let result = Math.sqrt(base ** 2 + height ** 2);
+            document.getElementById("show").innerHTML = result.toFixed(3);
+        }
+
+
+//คำนวณวันเป็นวินาที
+function calculateSeconds() {
+  const days = document.getElementById("inputDays").value;
+  let text;
+
+  if (isNaN(days) || days < 1) {
+    text = "ป้อนค่าไม่ถูกต้อง";
+  } else {
+    const seconds = daysToSeconds(days);
+    text = `จำนวนวินาทีที่เท่ากับ ${seconds} วินาที`;
+  }
+
+  document.getElementById("resultInSeconds").innerText = text;
+}
+
+function daysToSeconds(days) {
+  const secondsInMinute = 60;
+  const minutesInHour = 60;
+  const hoursInDay = 24;
+
+  const seconds = days * hoursInDay * minutesInHour * secondsInMinute;
+
+  return seconds;
+}
+
+
+
+
+
+
+
+//
+function calculateLoyaltyPoints(totalSales) {
+  let points = totalSales / 100;
+  points = Math.floor(points);
+  return points;
+}
+
+function updatePoints() {
+  const newTotalSales = document.getElementById("newTotalSales").value;
+  const newPoints = calculateLoyaltyPoints(parseInt(newTotalSales));
+
+  if (!isNaN(newPoints)) {
+    document.getElementById("totalSales").innerText = newTotalSales;
+    document.getElementById("loyaltyPoints").innerText = newPoints;
+  } else {
+    alert("โปรดกรอกตัวเลขที่ถูกต้อง");
+  }
+}
+
+
+
+
+//
+  function calculateCircleLength(radius) {
+    var PI = Math.PI;
+    var circleLength = PI * 2 * radius;
+    return circleLength;
+  }
+
+  function calculateCircleLength(radius) {
+    var PI = Math.PI;
+    var circleLength = PI * 2 * radius;
+    return circleLength;
+  }
+
+  function calculate() {
+    var radius = prompt("กรุณาใส่ค่ารัศมีของวงกลม:");
+
+    if (radius !== null && radius !== "") {
+      radius = parseInt(radius);
+
+      if (!isNaN(radius)) {
+        var length = calculateCircleLength(radius);
+        document.getElementById("result").innerText = "ความยาวเส้นรอบวงของวงกลมที่มีรัศมี " + radius + " คือ " + length;
+      } else {
+        alert("โปรดกรอกรัศมีของวงกลมให้ถูกต้อง");
+      }
+    }
+  }
+
+
+</script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Esigned</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+  <!-- slider stylesheet -->
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Arriwan
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="java.html"> Java </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="api.html"> Api </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact us</a>
+                </li>
+              </ul>
+              <div class="user_option">
+                <a href="">
+                  <img src="images/user.png" alt="">
+                </a>
+                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+
+<!-- Page content -->
+<div class="w3-content w3-padding-64 w3-margin-top" style="max-width:1564px">
+
+  <h1>API</h1>
+  
+   
+  <h2>Click to get a Random Image</h2>
+       <div>
+          <img id="randomImage" src="https://source.unsplash.com/random/300x300" alt="Random Image">
+          <br>
+          <button onclick="getRandomImage()">Get Random</button>
+        </div>
+  
+  
+  
+  <h2 >Coinbase API</h2>
+  <div >
+    <div id="prices"></div>
+    <div id="lastUpdateTime"></div>
+  </div>
+  
+  
+  <form 
+    method="POST" 
+    action="https://script.google.com/macros/s/AKfycbx48SgSIyAdOJkgyxMLpznr2c1envG-2kBq9bX_VKh3HJfmQSJrQatnRRfA8TZMAUF1QQ/exec"
+  >
+    <input name="Email" type="email" placeholder="Email" required>
+    <input name="Name" type="text" placeholder="Name" required>
+    <button type="submit">Send</button>
+  </form>
+  
+  
+  <div class="w3-center w3-padding-24">
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRT1C1MGhzyd4KdtakVafLRc8SURsFuI3_xYPkZDhG9Abm2Eb4U63f8xJXsGHQbfck4Lt0HNvLPrdDV/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        </div>
+  
+  
+  
+  
+  
+  <!-- End page content -->
+  </div>
+
+
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        
+      </div>
+    </div>
+  </section>
+
+
+  <!-- end info_section -->
+
+ <!-- footer section -->
+ <section class="container-fluid footer_section">
+  <p>
+    &copy; 2020 All Rights Reserved By
+    <a href="https://html.design/">Free Html Templates</a>
+    Distrubuted By <a href="https://themewagon.com">ThemeWagon</a>
+  </p>
+</section>
+<!-- footer section -->
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+</script>
+<!-- owl carousel script 
+  -->
+<script type="text/javascript">
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 0,
+    navText: [],
+    center: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+</script>
+<!-- end owl carousel script -->
+
+
+
+
+
+
+
+<script>
+  function getRandomImage() {
+
+const randomNumber = Math.floor(Math.random() * 100); // สุ่มตัวเลขเพื่อใช้เป็นค่าสำหรับคำค้นหาแบบสุ่ม
+const randomImageUrl = `https://source.unsplash.com/300x300/?random&${randomNumber}`; // Unsplash API ที่รับพารามิเตอร์สำหรับการกำหนดความกว้างและความสูงของภาพ
+
+document.getElementById("randomImage").src = randomImageUrl;
+}
+
+// API CRYPTO //
+function fetchPrices() {
+var now = new Date();
+var currentTime = now.toLocaleTimeString();
+
+fetch('https://api.coinbase.com/v2/exchange-rates?currency=USDT')
+.then(response => response.json())
+.then(data => {
+   displayPrices(data);
+   displayLastUpdateTime(currentTime);
+})
+.catch(error => {
+   console.error('Error fetching data:', error);
+   alert('Error fetching data. Please try again.');
+});
+}
+
+function displayPrices(data) {
+var pricesDiv = document.getElementById('prices');
+var rates = data.data.rates;
+
+var currencies = ['1INCH', 'AAVE', 'ABT', 'ACH', 'ACS', 'ADA', 'AED', 'BTC', 'ETH'];
+var pricesHtml = '<p>1 USDT can buy : </p><ul>';
+
+currencies.forEach(currency => {
+if (rates[currency]) {
+   pricesHtml += `<li>${currency} : ${rates[currency]}</li>`;
+} else {
+   pricesHtml += `<li>${currency} : N/A</li>`;
+}
+});
+
+pricesHtml += '</ul>';
+pricesDiv.innerHTML = pricesHtml;
+}
+
+function displayLastUpdateTime(currentTime) {
+var updateTimeDiv = document.getElementById('lastUpdateTime');
+updateTimeDiv.innerHTML = `<p>Last Update Time : ${currentTime}</p>`;
+}
+
+fetchPrices();
+
+setInterval(fetchPrices, 3000);
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
